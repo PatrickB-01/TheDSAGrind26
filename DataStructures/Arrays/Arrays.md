@@ -138,6 +138,8 @@ An array is not useful in places where we have operations like insert in the mid
 
 # Typical interview problems / patterns that use it
 
+<!-- TODO: Add example prompts here -->
+
 # Edge cases & pitfalls
 
 - Empty Array: An array with zero elements; often causes errors if not checked.
