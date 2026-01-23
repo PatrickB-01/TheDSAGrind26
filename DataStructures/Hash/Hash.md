@@ -30,7 +30,7 @@ It uses a hash function to compute an index (hash code) into an array of buckets
 
 # Time complexity for each operation
 
-The core operations of a hash data structure are insertion, deletion, and searching (or lookup), which generally achieve `O(1)` average time complexity.
+The core operations of a hash data structure are insertion, deletion, and searching (or lookup), which generally achieve `O(1)` average time complexity (amortized).
 
 # Space complexity
 
@@ -48,8 +48,7 @@ Each slot typically holds a key-value pair, or a reference/pointer to a node (in
 
 Load factor
 A load factor 
-α
-{\displaystyle \alpha } is a critical statistic of a hash table, and is defined as follows:[2]
+α is a critical statistic of a hash table, and is defined as follows:
 load factor
  
 `α = n/m`
@@ -126,6 +125,7 @@ The most valuable aspect of a hash table over other abstract data structures is 
 Hash tables can do them all in constant time.
 This makes hash tables ideal for scenarios where fast lookups and updates are critical.
 
+Key value association and fast retrieval
 
 # Typical interview problems / patterns that use it
 
@@ -153,6 +153,13 @@ This makes hash tables ideal for scenarios where fast lookups and updates are cr
 - **Avoid Object Creation**: Do not repeatedly create new key objects if you can reuse them, especially for compound keys. 
 
 # Related data structures & trade-offs
+
+When using the collision method of separate chaining the load factor range is between 1 and 3. 
+
+When using open addressing the load factor range is between 0 and 1.
+
+That means that when having a lot of keys  or a lot of insertions and deletions it  better to use seperate chaining since it can handle a larger load factor.
+While if we have a smaller number of keys and less insertions and deletions open addressing is better since it uses less memory.
 
 # References
 
