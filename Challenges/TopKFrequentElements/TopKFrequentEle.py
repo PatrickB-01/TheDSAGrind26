@@ -66,10 +66,9 @@ class Solution:
     
     def topKFrequent3(self, nums: List[int], k: int) -> List[int]:
         # works but same performace as 2
-        setu = set(nums)
         counts={}
-        for n in setu:
-            counts[n]=nums.count(n)
+        for n in nums:
+            counts[n] = counts.get(n,0) + 1
         top = [(0,0)]*k
         for key,v in counts.items():
             for i in range(k):
