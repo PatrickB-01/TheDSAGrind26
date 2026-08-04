@@ -7,6 +7,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Two Sum                | Hash Map        | Store values seen so far and check whether the complement has already appeared |
 | Valid Anagrams         | Hash Map        | Keep count of frequency of values with fast lookup |
 | Group Anagrams        | Hash Map        | Use a signature such as a sorted string or frequency count as a key to group related values efficiently |
+| Top K Frequent Elements | Heap / Hash Map | Count frequencies first, then use a heap to retrieve the k most frequent values efficiently |
 
 
 # Clues
@@ -17,3 +18,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to find a pair or complement quickly | Hash Map |
 | Keep count of frequencies + fast lookup for comparison/edit | Hash Map |
 | Need to group items by a shared signature or classify them into buckets | Hash Map |
+| Need fast access to the k most frequent items and frequency counts matter | Heap / Hash Map |
