@@ -4,6 +4,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Problem                | Pattern         | Why?                                   |
 | ---------------------- | --------------- | -------------------------------------- |
 | Contains Duplicate     | Hash Set        | Detect repeated value                  |
+| Valid Sudoku           | Hash Set        | Track seen values in each row, column, and 3x3 box using an index signature |
 | Two Sum                | Hash Map        | Store values seen so far and check whether the complement has already appeared |
 | Valid Anagrams         | Hash Map        | Keep count of frequency of values with fast lookup |
 | Group Anagrams        | Hash Map        | Use a signature such as a sorted string or frequency count as a key to group related values efficiently |
@@ -17,6 +18,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Clue                | Pattern        |
 | ------------------- | -------------- |
 | Repeated values + yes/no answer + no need for counts or sorting | Hash Set |
+| Need to validate rows, columns, and 3x3 sub-boxes in a grid for duplicates | Hash Set |
 | Need to find a pair or complement quickly | Hash Map |
 | Keep count of frequencies + fast lookup for comparison/edit | Hash Map |
 | Need to group items by a shared signature or classify them into buckets | Hash Map |
