@@ -10,11 +10,12 @@ This file keeps track of patterns that i have seen in coding challenges
 | Group Anagrams        | Hash Map        | Use a signature such as a sorted string or frequency count as a key to group related values efficiently |
 | Top K Frequent Elements | Heap / Hash Map | Count frequencies first, then use a heap to retrieve the k most frequent values efficiently |
 | Longest Consecutive Sequence | Hash Set | Put values in a set, start only from numbers with no predecessor, and expand forward to count each streak in O(n) |
-
 | Product of Array Except Self | Prefix / Suffix Products | Compute prefix and suffix products to exclude the current element; two-pass O(n) without division |
-
+| Valid Parentheses       | Stack           | Last opened must close first |
+| Min Stack              | Stack (min tracking) | Maintain current minimum with each element (auxiliary min stack or store pair (value, current_min)) |
 
 # Clues
+
 
 | Clue                | Pattern        |
 | ------------------- | -------------- |
@@ -26,3 +27,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need fast access to the k most frequent items and frequency counts matter | Heap / Hash Map |
 | Need the longest consecutive streak and fast membership checks | Hash Set |
 | Need product of all other elements without using division | Prefix / Suffix Products |
+| Need to retrieve current minimum in O(1) | Stack (auxiliary min / pair each value with current min) |
+| Nested structure     | Stack          |
