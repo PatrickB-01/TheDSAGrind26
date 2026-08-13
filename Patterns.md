@@ -12,6 +12,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Longest Consecutive Sequence | Hash Set | Put values in a set, start only from numbers with no predecessor, and expand forward to count each streak in O(n) |
 | Product of Array Except Self | Prefix / Suffix Products | Compute prefix and suffix products to exclude the current element; two-pass O(n) without division |
 | Valid Parentheses       | Stack           | Last opened must close first |
+| Reverse Polish Notation | Stack           | Process operators only after their operands are available, so a stack naturally holds intermediate values |
 | Min Stack              | Stack (min tracking) | Maintain current minimum with each element (auxiliary min stack or store pair (value, current_min)) |
 
 # Clues
@@ -28,4 +29,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need the longest consecutive streak and fast membership checks | Hash Set |
 | Need product of all other elements without using division | Prefix / Suffix Products |
 | Need to retrieve current minimum in O(1) | Stack (auxiliary min / pair each value with current min) |
+| Expression is in postfix form and operators apply to previous operands | Stack |
 | Nested structure     | Stack          |
