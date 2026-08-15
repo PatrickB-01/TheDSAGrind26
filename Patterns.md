@@ -14,6 +14,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Valid Parentheses       | Stack           | Last opened must close first |
 | Reverse Polish Notation | Stack           | Process operators only after their operands are available, so a stack naturally holds intermediate values |
 | Min Stack              | Stack (min tracking) | Maintain current minimum with each element (auxiliary min stack or store pair (value, current_min)) |
+| Daily Temperatures    | Monotonic Stack     | Maintain indices in decreasing order of values to efficiently find the next greater element |
 
 # Clues
 
@@ -31,3 +32,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to retrieve current minimum in O(1) | Stack (auxiliary min / pair each value with current min) |
 | Expression is in postfix form and operators apply to previous operands | Stack |
 | Nested structure     | Stack          |
+| Find next/previous element that is greater/smaller than current element | Monotonic Stack |
