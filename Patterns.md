@@ -15,6 +15,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Reverse Polish Notation | Stack           | Process operators only after their operands are available, so a stack naturally holds intermediate values |
 | Min Stack              | Stack (min tracking) | Maintain current minimum with each element (auxiliary min stack or store pair (value, current_min)) |
 | Daily Temperatures    | Monotonic Stack     | Maintain indices in decreasing order of values to efficiently find the next greater element |
+| Car Fleet             | Stack (working backwards) | Sort by position, calculate arrival times, then work backwards to identify separate fleets by comparing times |
 
 # Clues
 
@@ -33,3 +34,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Expression is in postfix form and operators apply to previous operands | Stack |
 | Nested structure     | Stack          |
 | Find next/previous element that is greater/smaller than current element | Monotonic Stack |
+| Working backwards through sorted elements to identify separate groups/fleets | Stack (working backwards) |
