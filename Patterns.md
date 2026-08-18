@@ -17,6 +17,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Daily Temperatures    | Monotonic Stack     | Maintain indices in decreasing order of values to efficiently find the next greater element |
 | Car Fleet             | Stack (working backwards) | Sort by position, calculate arrival times, then work backwards to identify separate fleets by comparing times |
 | Largest Rectangle in Histogram | Monotonic Stack | For each bar, find nearest smaller element on left and right to determine max rectangle width, then multiply by height |
+| Valid Palindrome       | Two Pointers     | Use left and right pointers converging from both ends to compare characters, detecting mismatches early |
 
 # Clues
 
@@ -37,3 +38,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Find next/previous element that is greater/smaller than current element | Monotonic Stack |
 | Working backwards through sorted elements to identify separate groups/fleets | Stack (working backwards) |
 | Need to find max area/rectangle bounded by smaller elements on both sides | Monotonic Stack |
+| Comparing elements from opposite ends or validating sequence reads same forwards/backwards | Two Pointers |
