@@ -10,6 +10,8 @@ This file keeps track of patterns that i have seen in coding challenges
 | Group Anagrams        | Hash Map        | Use a signature such as a sorted string or frequency count as a key to group related values efficiently |
 | Top K Frequent Elements | Heap / Hash Map | Count frequencies first, then use a heap to retrieve the k most frequent values efficiently |
 | Longest Consecutive Sequence | Hash Set | Put values in a set, start only from numbers with no predecessor, and expand forward to count each streak in O(n) |
+| Two Sum II              | Two Pointers    | Use a left and right pointer on a sorted array and move inward based on whether the running sum is too small or too large |
+| 3Sum                    | Sorting / Two Pointers | Sort the array, fix one number, then use two pointers to find pairs that complete the target sum while skipping duplicates |
 | Product of Array Except Self | Prefix / Suffix Products | Compute prefix and suffix products to exclude the current element; two-pass O(n) without division |
 | Valid Parentheses       | Stack           | Last opened must close first |
 | Reverse Polish Notation | Stack           | Process operators only after their operands are available, so a stack naturally holds intermediate values |
@@ -27,6 +29,8 @@ This file keeps track of patterns that i have seen in coding challenges
 | Repeated values + yes/no answer + no need for counts or sorting | Hash Set |
 | Need to validate rows, columns, and 3x3 sub-boxes in a grid for duplicates | Hash Set |
 | Need to find a pair or complement quickly | Hash Map |
+| Need to find a pair in a sorted array with constant extra space | Two Pointers |
+| Need to find unique triplets that reach a target sum, especially zero | Sorting / Two Pointers |
 | Keep count of frequencies + fast lookup for comparison/edit | Hash Map |
 | Need to group items by a shared signature or classify them into buckets | Hash Map |
 | Need fast access to the k most frequent items and frequency counts matter | Heap / Hash Map |
