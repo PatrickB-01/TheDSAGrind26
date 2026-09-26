@@ -21,6 +21,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Largest Rectangle in Histogram | Monotonic Stack | For each bar, find nearest smaller element on left and right to determine max rectangle width, then multiply by height |
 | Valid Palindrome       | Two Pointers     | Use left and right pointers converging from both ends to compare characters, detecting mismatches early |
 | Best Time to Buy and Sell Stock | Running Minimum | Track the lowest buy price seen so far and compare it with each later selling price to maximize profit |
+| Longest Substring Without Repeating Characters | Sliding Window / Hash Set | Expand the window while characters are unique, and move the left bound forward when a duplicate appears |
 
 # Clues
 
@@ -45,3 +46,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to find max area/rectangle bounded by smaller elements on both sides | Monotonic Stack |
 | Comparing elements from opposite ends or validating sequence reads same forwards/backwards | Two Pointers |
 | Need maximum profit from buying before selling by tracking the lowest value seen so far | Running Minimum |
+| Need the longest contiguous substring while removing duplicates as the window grows | Sliding Window / Hash Set |
