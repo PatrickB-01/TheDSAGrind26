@@ -22,6 +22,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Valid Palindrome       | Two Pointers     | Use left and right pointers converging from both ends to compare characters, detecting mismatches early |
 | Best Time to Buy and Sell Stock | Running Minimum | Track the lowest buy price seen so far and compare it with each later selling price to maximize profit |
 | Longest Substring Without Repeating Characters | Sliding Window / Hash Set | Expand the window while characters are unique, and move the left bound forward when a duplicate appears |
+| Longest Repeating Character Replacement | Sliding Window / Frequency Count | Keep the most frequent character in the window and replace every other character; shrink the window when the required replacements exceed k |
 
 # Clues
 
@@ -47,3 +48,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Comparing elements from opposite ends or validating sequence reads same forwards/backwards | Two Pointers |
 | Need maximum profit from buying before selling by tracking the lowest value seen so far | Running Minimum |
 | Need the longest contiguous substring while removing duplicates as the window grows | Sliding Window / Hash Set |
+| Need the longest substring that can be made uniform with at most k edits | Sliding Window / Frequency Count |
