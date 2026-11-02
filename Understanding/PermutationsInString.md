@@ -61,4 +61,5 @@ Also realize mid way that i need to be able to control the tail of the window so
 Not optimal though, but i am happy i was able to do it on my own.
 
 # Solution
-
+we could update the second frequency while iterating.
+freq count is equal to size of alphabet meaning constant time
