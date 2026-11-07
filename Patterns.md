@@ -25,6 +25,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Longest Repeating Character Replacement | Sliding Window / Frequency Count | Keep the most frequent character in the window and replace every other character; shrink the window when the required replacements exceed k |
 | Permutation in String | Sliding Window / Frequency Count | Maintain a fixed-size window and compare character frequencies to detect an anagram |
 | Minimum Window Substring   | Sliding Window / Frequency Count | Expand the window until it contains all required characters, then shrink it while preserving the required frequencies to find the shortest valid window |
+| Sliding Window Maximum | Monotonic Queue / Deque | Maintain candidates in decreasing order, removing smaller values that can never become the maximum and removing values that leave the window |
 | Container With Most Water  | Two Pointers | Start at both ends, calculate area, and move the shorter line inward because moving the taller line cannot improve the limiting height |
 | Trapping Rain Water | Two Pointers | Track the highest boundary from each side and move the shorter boundary inward to calculate trapped water |
 
@@ -55,5 +56,6 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need the longest substring that can be made uniform with at most k edits | Sliding Window / Frequency Count |
 | Need to determine whether a substring is a permutation/anagram of another string | Sliding Window / Frequency Count |
 | Need to find the shortest substring containing all required characters, including duplicates | Sliding Window / Frequency Count |
+| Need the maximum or minimum for every fixed-size sliding window in O(n) | Monotonic Queue / Deque |
 | Need to maximize area between two vertical lines by balancing width and the shorter height | Two Pointers |
 | Need to calculate water trapped between elevations bounded by heights on both sides | Two Pointers |
