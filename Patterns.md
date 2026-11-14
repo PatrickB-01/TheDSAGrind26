@@ -29,6 +29,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Container With Most Water  | Two Pointers | Start at both ends, calculate area, and move the shorter line inward because moving the taller line cannot improve the limiting height |
 | Trapping Rain Water | Two Pointers | Track the highest boundary from each side and move the shorter boundary inward to calculate trapped water |
 | Reverse Linked List | Linked List Pointer Manipulation | Reverse each link in place while advancing through the list with previous, current, and next pointers |
+| Merge Two Sorted Lists | Two Pointers | Compare the current nodes from each sorted list, append the smaller one, and attach the remaining nodes |
 
 # Clues
 
@@ -61,3 +62,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to maximize area between two vertical lines by balancing width and the shorter height | Two Pointers |
 | Need to calculate water trapped between elevations bounded by heights on both sides | Two Pointers |
 | Need to reverse the links in a singly linked list in place | Linked List Pointer Manipulation |
+| Need to merge two sorted linked lists by repeatedly choosing the smaller current node | Two Pointers |

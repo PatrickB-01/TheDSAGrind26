@@ -10,7 +10,9 @@ def printLinkedList(head:ListNode)->None:
         print(curr.val)
         curr=curr.next
 
-def buildLinkedListFromArray(arr:list)->ListNode:
+def buildLinkedListFromArray(arr:list)->ListNode|None:
+    if len(arr)==0:
+        return None
     head = ListNode(arr[0],None)
     curr = ListNode(None,None)
     for i in range(len(arr)):
