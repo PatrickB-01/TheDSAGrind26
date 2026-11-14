@@ -28,6 +28,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Sliding Window Maximum | Monotonic Queue / Deque | Maintain candidates in decreasing order, removing smaller values that can never become the maximum and removing values that leave the window |
 | Container With Most Water  | Two Pointers | Start at both ends, calculate area, and move the shorter line inward because moving the taller line cannot improve the limiting height |
 | Trapping Rain Water | Two Pointers | Track the highest boundary from each side and move the shorter boundary inward to calculate trapped water |
+| Reverse Linked List | Linked List Pointer Manipulation | Reverse each link in place while advancing through the list with previous, current, and next pointers |
 
 # Clues
 
@@ -59,3 +60,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need the maximum or minimum for every fixed-size sliding window in O(n) | Monotonic Queue / Deque |
 | Need to maximize area between two vertical lines by balancing width and the shorter height | Two Pointers |
 | Need to calculate water trapped between elevations bounded by heights on both sides | Two Pointers |
+| Need to reverse the links in a singly linked list in place | Linked List Pointer Manipulation |
