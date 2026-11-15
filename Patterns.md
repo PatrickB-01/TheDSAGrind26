@@ -32,6 +32,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Merge Two Sorted Lists | Two Pointers | Compare the current nodes from each sorted list, append the smaller one, and attach the remaining nodes |
 | Linked List Cycle | Fast / Slow Pointers | Move one pointer twice as fast as the other; if the list has a cycle, they eventually meet |
 | Reorder List | Fast / Slow Pointers + Reverse + Merge | Find the midpoint, reverse the second half, then merge both halves alternately in place |
+| Remove Nth Node From End of List | Fast / Slow Pointers | Start the pointers n nodes apart so the slow pointer reaches the node before the target when fast reaches the end |
 
 # Clues
 
@@ -67,6 +68,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to merge two sorted linked lists by repeatedly choosing the smaller current node | Two Pointers |
 | Need to detect a linked-list cycle in O(1) extra space | Fast / Slow Pointers |
 | Need to reorder a linked list by alternating nodes from the front and back without extra space | Fast / Slow Pointers + Reverse + Merge |
+| Need to remove a node a fixed distance from the end in one pass | Fast / Slow Pointers |
 
 
 # Help
