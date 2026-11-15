@@ -31,6 +31,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Reverse Linked List | Linked List Pointer Manipulation | Reverse each link in place while advancing through the list with previous, current, and next pointers |
 | Merge Two Sorted Lists | Two Pointers | Compare the current nodes from each sorted list, append the smaller one, and attach the remaining nodes |
 | Linked List Cycle | Fast / Slow Pointers | Move one pointer twice as fast as the other; if the list has a cycle, they eventually meet |
+| Reorder List | Fast / Slow Pointers + Reverse + Merge | Find the midpoint, reverse the second half, then merge both halves alternately in place |
 
 # Clues
 
@@ -65,3 +66,4 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to reverse the links in a singly linked list in place | Linked List Pointer Manipulation |
 | Need to merge two sorted linked lists by repeatedly choosing the smaller current node | Two Pointers |
 | Need to detect a linked-list cycle in O(1) extra space | Fast / Slow Pointers |
+| Need to reorder a linked list by alternating nodes from the front and back without extra space | Fast / Slow Pointers + Reverse + Merge |
