@@ -33,6 +33,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Linked List Cycle | Fast / Slow Pointers | Move one pointer twice as fast as the other; if the list has a cycle, they eventually meet |
 | Reorder List | Fast / Slow Pointers + Reverse + Merge | Find the midpoint, reverse the second half, then merge both halves alternately in place |
 | Remove Nth Node From End of List | Fast / Slow Pointers | Start the pointers n nodes apart so the slow pointer reaches the node before the target when fast reaches the end |
+| Invert Binary Tree | Recursion / Tree Traversal | Swap each node's left and right children, then recursively invert both subtrees |
 
 # Clues
 
@@ -69,6 +70,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to detect a linked-list cycle in O(1) extra space | Fast / Slow Pointers |
 | Need to reorder a linked list by alternating nodes from the front and back without extra space | Fast / Slow Pointers + Reverse + Merge |
 | Need to remove a node a fixed distance from the end in one pass | Fast / Slow Pointers |
+| Need to transform every node in a tree by recursively processing its subtrees | Recursion / Tree Traversal |
 
 
 # Help

@@ -22,3 +22,9 @@ def buildLinkedListFromArray(arr:list)->ListNode|None:
             curr.next = ListNode(arr[i],None)
             curr= curr.next
     return head
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
