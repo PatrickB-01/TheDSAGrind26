@@ -35,6 +35,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Remove Nth Node From End of List | Fast / Slow Pointers | Start the pointers n nodes apart so the slow pointer reaches the node before the target when fast reaches the end |
 | Invert Binary Tree | Recursion / Tree Traversal | Swap each node's left and right children, then recursively invert both subtrees |
 | Maximum Depth of Binary Tree | Recursion / Tree Traversal | Recursively find the deepest root-to-leaf path by taking the larger subtree depth |
+| Diameter of Binary Tree | Post-order DFS / Tree DP | Compute both subtree heights before combining them to evaluate the longest path through each node |
 
 # Clues
 
@@ -73,6 +74,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to remove a node a fixed distance from the end in one pass | Fast / Slow Pointers |
 | Need to transform every node in a tree by recursively processing its subtrees | Recursion / Tree Traversal |
 | Need to find the longest root-to-leaf path or maximum depth of a binary tree | Recursion / Tree Traversal |
+| Need to combine left and right subtree heights to find the longest path through any tree node | Post-order DFS / Tree DP |
 
 
 # Help
@@ -107,4 +109,20 @@ I can walk you through the pointer state step-by-step or give you a clean visual
 Given a list to be converted to a tree, If we observe carefully we can see that if the parent node is at index i in the array then the left child of that node is at index (2*i + 1) and the right child is at index (2*i + 2) in the array. 
 Using this concept, we can easily insert the left and right nodes by choosing their parent node. We will insert the first element present in the array as the root node at level 0 in the tree and start traversing the array and for every node, we will insert both children left and right in the tree. 
 
+#### Pre order traversal
 
+Pre-order Traversal is done by visiting the root node first, then recursively do a pre-order traversal of the left subtree, followed by a recursive pre-order traversal of the right subtree. It's used for creating a copy of the tree, prefix notation of an expression tree, etc.
+
+This traversal is "pre" order because the node is visited "before" the recursive pre-order traversal of the left and right subtrees.
+
+#### In order traversal
+
+In-order Traversal does a recursive In-order Traversal of the left subtree, visits the root node, and finally, does a recursive In-order Traversal of the right subtree. This traversal is mainly used for Binary Search Trees where it returns values in ascending order.
+
+What makes this traversal "in" order, is that the node is visited in between the recursive function calls. The node is visited after the In-order Traversal of the left subtree, and before the In-order Traversal of the right subtree.
+
+#### Post order traversal
+
+Post-order Traversal works by recursively doing a Post-order Traversal of the left subtree and the right subtree, followed by a visit to the root node. It is used for deleting a tree, post-fix notation of an expression tree, etc.
+
+What makes this traversal "post" is that visiting a node is done "after" the left and right child nodes are called recursively.
