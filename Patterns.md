@@ -34,6 +34,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Reorder List | Fast / Slow Pointers + Reverse + Merge | Find the midpoint, reverse the second half, then merge both halves alternately in place |
 | Remove Nth Node From End of List | Fast / Slow Pointers | Start the pointers n nodes apart so the slow pointer reaches the node before the target when fast reaches the end |
 | Invert Binary Tree | Recursion / Tree Traversal | Swap each node's left and right children, then recursively invert both subtrees |
+| Maximum Depth of Binary Tree | Recursion / Tree Traversal | Recursively find the deepest root-to-leaf path by taking the larger subtree depth |
 
 # Clues
 
@@ -71,6 +72,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to reorder a linked list by alternating nodes from the front and back without extra space | Fast / Slow Pointers + Reverse + Merge |
 | Need to remove a node a fixed distance from the end in one pass | Fast / Slow Pointers |
 | Need to transform every node in a tree by recursively processing its subtrees | Recursion / Tree Traversal |
+| Need to find the longest root-to-leaf path or maximum depth of a binary tree | Recursion / Tree Traversal |
 
 
 # Help
@@ -97,3 +99,12 @@ To make these easier, tell me:
 • Which specific problem are you stuck on right now?
 • What programming language are you using?
 I can walk you through the pointer state step-by-step or give you a clean visual breakdown.
+
+## Tree
+
+### Binary Tree
+
+Given a list to be converted to a tree, If we observe carefully we can see that if the parent node is at index i in the array then the left child of that node is at index (2*i + 1) and the right child is at index (2*i + 2) in the array. 
+Using this concept, we can easily insert the left and right nodes by choosing their parent node. We will insert the first element present in the array as the root node at level 0 in the tree and start traversing the array and for every node, we will insert both children left and right in the tree. 
+
+
