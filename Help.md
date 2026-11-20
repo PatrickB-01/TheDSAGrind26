@@ -133,8 +133,13 @@ This is the key mental model:
 
 For example:
 
-```
-def calculate(node):    if not node:        return 0    left = calculate(node.left)    right = calculate(node.right)    return node.val + left + right
+```py
+def calculate(node):    
+    if not node:        
+        return 0    
+    left = calculate(node.left)    
+    right = calculate(node.right)    
+    return node.val + left + right
 ```
 
 When `calculate(2)` calls `calculate(4)`, its local variables haven't disappeared.
@@ -149,16 +154,26 @@ This is probably the most useful way to think about traversals.
 
 All three traversals have the same recursive structure. Only the position of the processing operation changes.
 
-```
-def traverse(node):    if not node:        return    # Something happens here    traverse(node.left)    # Or something happens here    traverse(node.right)    # Or something happens here
+```py
+def traverse(node):    
+    if not node:        
+        return    
+    
+    # Something happens here    
+    traverse(node.left)    
+    # Or something happens here    
+    traverse(node.right)    
+    # Or something happens here
 ```
 
 **Preorder: Node → Left → Right**
 
 Process before children
 
-```
-process(node)traverse(node.left)traverse(node.right)
+```py
+process(node)
+traverse(node.left)
+traverse(node.right)
 ```
 
 Useful when you need to do something with a node before exploring its children.
@@ -173,8 +188,10 @@ Examples:
 
   Process between children
 
-```
-traverse(node.left)process(node)traverse(node.right)
+```py
+traverse(node.left)
+process(node)
+traverse(node.right)
 ```
 
 Useful when the ordering of nodes matters.
@@ -188,8 +205,10 @@ Examples:
 
   Process after children
 
-```
-traverse(node.left)traverse(node.right)process(node)
+```py
+traverse(node.left)
+traverse(node.right)
+process(node)
 ```
 
 Useful when you need information from children before processing the parent.
@@ -218,8 +237,13 @@ Suppose you want to calculate the height of a tree.
 
 A node needs to know the height of its left and right subtrees.
 
-```
-def height(node):    if not node:        return 0    left = height(node.left)    right = height(node.right)    return 1 + max(left, right)
+```py
+def height(node):    
+    if not node:        
+        return 0    
+    left = height(node.left)    
+    right = height(node.right)    
+    return 1 + max(left, right)
 ```
 
 Let's trace it:
@@ -250,8 +274,13 @@ Now imagine a problem where you need to know the depth of each node.
 
 You start at depth 0 and pass the depth to children.
 
-```
-def traverse(node, depth):    if not node:        return    print(node.val, depth)    traverse(node.left, depth + 1)    traverse(node.right, depth + 1)
+```py
+def traverse(node, depth):    
+    if not node:        
+        return    
+    print(node.val, depth)    
+    traverse(node.left, depth + 1)    
+    traverse(node.right, depth + 1)
 ```
 
 Here, the parent passes information to its children.
@@ -269,8 +298,13 @@ Other examples:
 
 Sometimes you want to collect results in one shared list.
 
-```
-def inorder(node, result):    if not node:        return    inorder(node.left, result)    result.append(node.val)    inorder(node.right, result)
+```py
+def inorder(node, result):    
+    if not node:        
+        return    
+    inorder(node.left, result)    
+    result.append(node.val)    
+    inorder(node.right, result)
 ```
 
 Every recursive call receives a reference to the same list.
@@ -330,8 +364,13 @@ Example: Pass the current depth, path, or accumulated sum to children.
 
 Typical structure:
 
-```
-def dfs(node, state):    if not node:        return    new_state = update(state, node)    dfs(node.left, new_state)    dfs(node.right, new_state)
+```py
+def dfs(node, state):    
+    if not node:        
+        return    
+    new_state = update(state, node)    
+    dfs(node.left, new_state)    
+    dfs(node.right, new_state)
 ```
 
 **Bottom-up (Children → Parent)**
@@ -342,8 +381,13 @@ Example: Calculate subtree height, subtree sum, or whether a subtree is balanced
 
 Typical structure:
 
-```
-def dfs(node):    if not node:        return BASE_VALUE    left = dfs(node.left)    right = dfs(node.right)    return combine(left, right)
+```py
+def dfs(node):    
+    if not node:        
+        return BASE_VALUE    
+    left = dfs(node.left)    
+    right = dfs(node.right)    
+    return combine(left, right)
 ```
 
 One subtle but important point: if the left subtree needs to communicate something to the right subtree, the parent generally has to receive the left result and then pass the relevant information to the right subtree. Recursive calls don't automatically share their local variables.
@@ -386,8 +430,14 @@ I want to give you one small exercise before moving to more complicated problems
 
 Consider this code:
 
-```
-def dfs(node):    if not node:        return 0    left = dfs(node.left)    right = dfs(node.right)    print(node.val)    return left + right + 1
+```py
+def dfs(node):    
+    if not node:        
+        return 0    
+    left = dfs(node.left)    
+    right = dfs(node.right)    
+    print(node.val)    
+    return left + right + 1
 ```
 
 And this tree:

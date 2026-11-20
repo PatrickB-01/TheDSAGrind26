@@ -32,7 +32,7 @@ class TreeNode:
 def insertLevelOrder(arr, i, n):
     root = None
     # Base case for recursion 
-    if i < n:
+    if i < n and arr[i] != None:
         root = TreeNode(arr[i]) 
         print(f"Inserting child {arr[ 2 * i + 1] if 2 * i + 1<n else None} for parent {arr[i]}")
         print(f"Inserting child {arr[ 2 * i + 2]  if 2 * i + 2<n else None} for parent {arr[i]}")
