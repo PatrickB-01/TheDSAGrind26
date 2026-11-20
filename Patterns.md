@@ -36,6 +36,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Invert Binary Tree | Recursion / Tree Traversal | Swap each node's left and right children, then recursively invert both subtrees |
 | Maximum Depth of Binary Tree | Recursion / Tree Traversal | Recursively find the deepest root-to-leaf path by taking the larger subtree depth |
 | Diameter of Binary Tree | Post-order DFS / Tree DP | Compute both subtree heights before combining them to evaluate the longest path through each node |
+| Balanced Binary Tree | Post-order DFS / Tree DP | Compute subtree heights bottom-up while checking whether the left and right heights differ by more than one |
 
 # Clues
 
@@ -75,4 +76,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to transform every node in a tree by recursively processing its subtrees | Recursion / Tree Traversal |
 | Need to find the longest root-to-leaf path or maximum depth of a binary tree | Recursion / Tree Traversal |
 | Need to combine left and right subtree heights to find the longest path through any tree node | Post-order DFS / Tree DP |
+| Need to verify that every node's left and right subtree heights differ by at most one | Post-order DFS / Tree DP |
 
