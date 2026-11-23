@@ -38,6 +38,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Diameter of Binary Tree | Post-order DFS / Tree DP | Compute both subtree heights before combining them to evaluate the longest path through each node |
 | Balanced Binary Tree | Post-order DFS / Tree DP | Compute subtree heights bottom-up while checking whether the left and right heights differ by more than one |
 | Same Tree | Recursion / Tree Traversal | Compare corresponding nodes in two trees for matching values and structure |
+| Subtree of Another Tree | Recursion / Tree Traversal | Recursively search every node in the main tree and compare each candidate subtree for matching values and structure |
 
 # Clues
 
@@ -79,4 +80,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to combine left and right subtree heights to find the longest path through any tree node | Post-order DFS / Tree DP |
 | Need to verify that every node's left and right subtree heights differ by at most one | Post-order DFS / Tree DP |
 | Need to compare two binary trees node by node for matching values and structure | Recursion / Tree Traversal |
+| Need to determine whether one binary tree appears inside another with the same values and structure | Recursion / Tree Traversal |
 
