@@ -40,6 +40,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Same Tree | Recursion / Tree Traversal | Compare corresponding nodes in two trees for matching values and structure |
 | Subtree of Another Tree | Recursion / Tree Traversal | Recursively search every node in the main tree and compare each candidate subtree for matching values and structure |
 | Lowest Common Ancestor of a Binary Search Tree | BST Traversal / Recursion | Use the BST ordering to move toward the side containing both nodes until the current node separates them |
+| Binary Tree Level Order Traversal | DFS / Level Tracking | Track each node's depth and group its value with the other nodes at the same level |
 
 # Clues
 
@@ -83,4 +84,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to compare two binary trees node by node for matching values and structure | Recursion / Tree Traversal |
 | Need to determine whether one binary tree appears inside another with the same values and structure | Recursion / Tree Traversal |
 | Need to find the lowest common ancestor of two nodes in a BST using their value ordering | BST Traversal / Recursion |
+| Need to group binary-tree node values by depth from top to bottom | DFS / Level Tracking |
 
