@@ -42,6 +42,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Lowest Common Ancestor of a Binary Search Tree | BST Traversal / Recursion | Use the BST ordering to move toward the side containing both nodes until the current node separates them |
 | Binary Tree Level Order Traversal | DFS / Level Tracking | Track each node's depth and group its value with the other nodes at the same level |
 | Binary Tree Right Side View | DFS / Level Tracking | Traverse right before left and record the first node encountered at each depth |
+| Count Good Nodes in Binary Tree | DFS / Path Maximum | Carry the maximum value seen on the root-to-node path; count a node when its value is at least that maximum |
 
 # Clues
 
@@ -87,4 +88,5 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to determine whether one binary tree appears inside another with the same values and structure | Recursion / Tree Traversal |
 | Need to find the lowest common ancestor of two nodes in a BST using their value ordering | BST Traversal / Recursion |
 | Need to group binary-tree node values by depth from top to bottom | DFS / Level Tracking |
+| Need to count tree nodes whose value is at least every ancestor's value on the root-to-node path | DFS / Path Maximum |
 
