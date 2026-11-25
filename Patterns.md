@@ -41,6 +41,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Subtree of Another Tree | Recursion / Tree Traversal | Recursively search every node in the main tree and compare each candidate subtree for matching values and structure |
 | Lowest Common Ancestor of a Binary Search Tree | BST Traversal / Recursion | Use the BST ordering to move toward the side containing both nodes until the current node separates them |
 | Binary Tree Level Order Traversal | DFS / Level Tracking | Track each node's depth and group its value with the other nodes at the same level |
+| Binary Tree Right Side View | DFS / Level Tracking | Traverse right before left and record the first node encountered at each depth |
 
 # Clues
 
@@ -78,6 +79,7 @@ This file keeps track of patterns that i have seen in coding challenges
 | Need to reorder a linked list by alternating nodes from the front and back without extra space | Fast / Slow Pointers + Reverse + Merge |
 | Need to remove a node a fixed distance from the end in one pass | Fast / Slow Pointers |
 | Need to transform every node in a tree by recursively processing its subtrees | Recursion / Tree Traversal |
+| Need the rightmost visible node at each depth of a binary tree | DFS / Level Tracking |
 | Need to find the longest root-to-leaf path or maximum depth of a binary tree | Recursion / Tree Traversal |
 | Need to combine left and right subtree heights to find the longest path through any tree node | Post-order DFS / Tree DP |
 | Need to verify that every node's left and right subtree heights differ by at most one | Post-order DFS / Tree DP |

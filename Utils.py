@@ -29,25 +29,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def insertLevelOrder(arr, i, n):
-    root = None
-    # Base case for recursion 
-    if i < n and arr[i] != None:
-        root = TreeNode(arr[i]) 
-        print(f"Inserting child {arr[ 2 * i + 1] if 2 * i + 1<n else None} for parent {arr[i]}")
-        print(f"Inserting child {arr[ 2 * i + 2]  if 2 * i + 2<n else None} for parent {arr[i]}")
-        # insert left child 
-        
-        root.left = insertLevelOrder(arr, 2 * i + 1, n)
-        
-
-        # insert right child 
-        
-        root.right = insertLevelOrder(arr, 2 * i + 2, n)
-
-        
-    return root
-
 def preOrderTraversal(node:TreeNode):
     if node is None:
         return
@@ -70,10 +51,39 @@ def postOrderTraversal(node:TreeNode):
     print(node.val, end=", ")
 
 def buildBinaryTreeFromList(arr:list)->TreeNode|None:
-    if len(arr)==0:
+    if not arr:
         return None
 
-    root=  insertLevelOrder(arr,0,len(arr))
+    if arr[0] is None:
+        if any(value is not None for value in arr[1:]):
+            raise ValueError("A tree cannot have nodes without a root.")
+        return None
+
+    root = TreeNode(arr[0])
+    parents = [root]
+    parent_index = 0
+    value_index = 1
+
+    while value_index < len(arr) and parent_index < len(parents):
+        parent = parents[parent_index]
+        parent_index += 1
+
+        left_value = arr[value_index]
+        value_index += 1
+        if left_value is not None:
+            parent.left = TreeNode(left_value)
+            parents.append(parent.left)
+
+        if value_index < len(arr):
+            right_value = arr[value_index]
+            value_index += 1
+            if right_value is not None:
+                parent.right = TreeNode(right_value)
+                parents.append(parent.right)
+
+    if any(value is not None for value in arr[value_index:]):
+        raise ValueError("Input contains nodes with no available parent.")
+
     return root
 
 def printTree(root:TreeNode)->None:
